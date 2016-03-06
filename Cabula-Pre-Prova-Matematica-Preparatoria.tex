@@ -1,0 +1,371 @@
+\documentclass[portuguese,a4paper,12pt,onecolumn,fleqn]{article}
+
+%fleqn, na linha acima, serve para as equações ficarem alinhadas à esquerda 
+% quando conjugadas com blocos \begin{gather*}
+
+\usepackage{a4wide}		% Para reduzir as margens
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage[portuguese]{babel}
+
+%\usepackage[ansinew]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{amsmath}	% Para fórmulas matemáticas
+\usepackage{amsthm}		% Para o environment de proof
+\usepackage{amsfonts}	% Para escrever "espaços" matematicos , como sejam R^2 ou K
+\newtheorem*{proposition}{Proposition}		% Para o environment de proposition. O "*" e' para NÃO numerar
+%\usepackage{pgfplots}	% Para gráficos xy (cartesianos)
+%\setlength{\mathindent}{0pt}	% Alinhar equações à esquerda (em vez de ficarem centradas)
+
+ 
+
+\usepackage{parskip}	% Para ter linha em branco entre parágrafos
+
+\usepackage{fancyhdr}	% Para definir cabeçalhos
+
+\usepackage{hyperref}	% Para criar links, via \url{URL}
+
+
+% Linha horizontal com espaco antes e depois:
+
+% A usar o comando sugerido pelo utilizador egreg em:
+% http://tex.stackexchange.com/questions/30805/vertical-space-between-horizontal-lines
+
+\newcommand{\myline}{\par
+  \kern3pt % space above the rules
+  \hrule height 1.5pt
+  \kern2pt % space between the rules
+  \hrule height 0.8pt
+  \kern3pt % space below the rules
+}
+
+
+%opening
+
+\pagestyle{fancy}
+\fancyhead[C]{Cábula Pré-Prova Presencial de ``Matemática Preparatória''\\(elaborada por Ricardo Dias Marques - Aluno nº 1100281 - v1.0, 5-mar-2016)}
+\fancyfoot[C]{Pág. \thepage}
+
+\title{Cábula Pré-Prova Presencial de \\``Matemática Preparatória''}
+
+\author{1ª versão (v1.0) elaborada em 4-mar-2016 por:
+\\\textbf{Ricardo Dias Marques}\\
+Aluno nº 1100281 da Licenciatura em Informática\\
+uab@ricmarques.net / 1100281@estudante.uab.pt}
+
+
+
+\begin{document}
+
+\maketitle
+
+Este documento está a ser disponibilizado nos termos da licença ``Creative Commons" de 
+``Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)":\\
+\url{http://creativecommons.org/licenses/by-nc-sa/4.0/}
+
+É possível que este documento contenha erros, pelos quais o(s) autor(es) \textbf{não} poderá/poderão assumir qualquer responsabilidade.
+
+
+\myline	% Linha horizontal separadora
+
+% A usar blocos de gather para alinhar equações à esquerda:
+
+\section*{Diversos}
+
+\subsection*{Fórmula Quadrática / Fórmula Resolvente:}
+
+
+\begin{gather*}
+ax^2 + bx + c = 0 
+\Leftrightarrow x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{gather*}
+
+FONTE: Pág. 13 do texto ``Prerequisitos\_Calculo-SITE.pdf"
+
+
+\subsection*{Potência negativa:}
+
+\begin{gather*}
+a^{-b} = \frac{1}{a^b}
+\end{gather*}
+
+\subsection*{Relação entre raízes e potências}
+
+\subsubsection*{Relação entre raiz quadrada e potência:}
+
+\begin{gather*}
+\sqrt{x}  = x^\frac{1}{2}
+\end{gather*}
+
+\subsubsection*{Relação genérica entre raízes e potências:}
+\begin{gather*}
+\sqrt[n]{a^m} = a^\frac{m}{n}
+\end{gather*}
+
+FONTE: Pág. 10 do texto ``Prerequisitos\_Calculo-SITE.pdf"
+
+\myline	% Linha horizontal separadora
+
+\section*{Fatoração}
+
+\subsection*{Soma de quadrados:}
+\begin{gather*}
+(a^2 + b^2) = a^2 + 2ab + b^2
+\end{gather*}
+
+FONTE: Pág. 7 do texto ``Prerequisitos\_Calculo-SITE.pdf"
+
+\subsection*{Diferença de quadrados:}
+\begin{gather*}
+(a^2 - b^2) = (a + b)(a - b)
+\end{gather*}
+
+FONTE: Pág. 11 do texto ``Prerequisitos\_Calculo-SITE.pdf"
+
+\subsection*{Soma e diferença de cubos:}
+\begin{gather*}
+(a^3 + b^3) = (a + b)(a^2 - ab + b^2)
+\\
+\\
+(a^3 - b^3) = (a - b)(a^2 + ab + b^2)
+\end{gather*}
+
+FONTE: Pág. 11 do texto ``Prerequisitos\_Calculo-SITE.pdf"
+
+\myline	% Linha horizontal separadora
+
+\section*{Logaritmos}
+
+\begin{gather*}
+\log_a 1 = 0
+\\
+\\
+\log_a a = 1
+\\
+\\
+\log_a (b \cdot c) = \log_a b + \log_a c
+\\
+\\
+\log_a \frac{b}{c} = \log_a b - \log_a c
+\\
+\\
+\log_a b^c = c \cdot \log_a b
+\\
+\\
+\log_a b = \frac{\log_c b}{\log_c a}
+\\
+\\
+a^{\log_a b} = b
+\end{gather*}
+
+
+FONTE: Pág. 10 do texto ``Prerequisitos\_Calculo-SITE.pdf"
+
+
+\myline	% Linha horizontal separadora
+
+\section*{Limites}
+
+\textit{``Proposição 4. Sejam ($u_n$) e ($v_n$) duas sucessões convergentes e seja $c$ uma constante.}
+
+\textit{Então:}
+
+(a) $\lim\limits_{n \to +\infty} c = c$
+
+(b) $\lim\limits_{n \to +\infty}(u_n + v_n ) = \lim\limits_{n \to +\infty}u_n + \lim\limits_{n \to +\infty}v_n$
+
+(c) $\lim\limits_{n \to +\infty}(c \cdot u_n ) = c \cdot \lim\limits_{n \to +\infty}u_n$
+
+(d) $\lim\limits_{n \to +\infty}(u_n \cdot v_n ) = (\lim\limits_{n \to +\infty}u_n) \cdot (\lim\limits_{n \to +\infty}v_n)$
+
+(e)	$\lim\limits_{n \to +\infty}\frac{u_n}{v_n} = \frac{\lim\limits_{n \to +\infty}u_n}{\lim\limits_{n \to +\infty}v_n}$, 
+desde que $\lim v_n \ne 0$
+
+(f) $\lim\limits_{n \to +\infty}\sqrt[p]{u_n} = \sqrt[p]{\lim\limits_{n \to +\infty} u_n}$, desde que $p$ seja ímpar ou $u_n > 0$
+
+FONTE: 
+
+\myline	% Linha horizontal separadora
+
+
+\section*{Derivadas}
+
+\subsection*{Regras de derivação}
+
+\subsubsection*{Definição de derivada:}
+
+\begin{gather*}
+f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}
+\end{gather*}
+
+FONTE: Pág. 1 do texto ``CQES\_derivadas-NOVO.pdf"
+
+
+\subsubsection*{Derivada de uma constante:}
+
+\begin{gather*}
+c' = 0 
+\end{gather*}
+($c$ é um número real qualquer)
+
+FONTE: Pág. 6 do texto ``CQES\_derivadas-NOVO.pdf"
+
+
+\subsubsection*{Derivada da função identidade:}
+
+\begin{gather*}
+x' = 1
+\end{gather*}
+
+FONTE: Pág. 7 do texto ``CQES\_derivadas-NOVO.pdf"
+
+
+\subsubsection*{Derivada da potência:}
+
+\begin{gather*}
+(x^n)' = n x^{n-1}
+\end{gather*}
+
+FONTE: Pág. 7 do texto ``CQES\_derivadas-NOVO.pdf"
+
+
+\subsubsection*{Derivada da função exponencial:}
+
+\begin{gather*}
+(e^x)' = e^x
+\end{gather*}
+
+FONTE: Pág. 8 do texto ``CQES\_derivadas-NOVO.pdf"
+
+
+\subsubsection*{Derivada da função logarítmica:}
+
+\begin{gather*}
+(\log x)' = \frac{1}{x}
+\end{gather*}
+
+FONTE: Pág. 8 do texto ``CQES\_derivadas-NOVO.pdf"
+
+
+\subsubsection*{Derivada da função seno:}
+
+\begin{gather*}
+(\textrm{sen } x)' = \textrm{cos } x
+\end{gather*}
+
+FONTE: Pág. 8 do texto ``CQES\_derivadas-NOVO.pdf"
+
+
+\subsubsection*{Derivada da função cosseno:}
+
+\begin{gather*}
+(\textrm{cos } x)' = - \textrm{sen } x
+\end{gather*}
+
+FONTE: Pág. 8 do texto ``CQES\_derivadas-NOVO.pdf"
+
+
+\myline	% Linha horizontal separadora
+
+
+\subsection*{Regras algébricas de derivação}
+
+\subsubsection*{Derivada do produto de uma constante $c$ por uma função $f$:}
+
+\begin{gather*}
+(c \cdot f)' = c \cdot f'
+\end{gather*}
+
+FONTE: Pág. 8 do texto ``CQES\_derivadas-NOVO.pdf"
+
+
+\subsubsection*{Derivada da soma (ou diferença) de duas funções $f$ e $g$:}
+
+\begin{gather*}
+(f + g)' = f' + g'
+\end{gather*}
+
+FONTE: Pág. 8 do texto ``CQES\_derivadas-NOVO.pdf"
+
+
+\subsubsection*{Derivada do produto de duas funções $f$ e $g$:}
+
+\begin{gather*}
+(f \cdot g)' = f' \cdot g + f \cdot g'
+\end{gather*}
+
+FONTE: Pág. 8 do texto ``CQES\_derivadas-NOVO.pdf"
+
+
+\subsubsection*{Derivada do quociente de duas funções $f$ e $g$:}
+
+\begin{gather*}
+\biggl(\frac{f}{g}\biggr)' = \frac{f' \cdot g - f \cdot g'}{g^2}
+\end{gather*}
+
+(nos pontos em que $g \ne 0$)
+
+FONTE: Pág. 8 do texto ``CQES\_derivadas-NOVO.pdf"
+
+
+\myline	% Linha horizontal separadora
+
+
+\subsection*{Regras generalizadas de derivação}
+
+Nas regras generalizadas constantes desta secção do formulário: $u = u(x)$
+
+\subsubsection*{Derivada da potência:}
+
+\begin{gather*}
+(u^n)' = n u^{n-1} \cdot u'
+\end{gather*}
+
+FONTE: Pág. 16 do texto ``CQES\_derivadas-NOVO.pdf"
+
+
+\subsubsection*{Derivada da função exponencial:}
+
+\begin{gather*}
+(e^u)' = u' e^u
+\end{gather*}
+
+FONTE: Pág. 16 do texto ``CQES\_derivadas-NOVO.pdf"
+
+
+\subsubsection*{Derivada da função logarítmica:}
+
+\begin{gather*}
+(\log u)' = \frac{u'}{u}
+\end{gather*}
+
+FONTE: Pág. 16 do texto ``CQES\_derivadas-NOVO.pdf"
+
+
+\subsubsection*{Derivada da função seno:}
+
+\begin{gather*}
+(\textrm{sen } u)' = u' \textrm{cos } u
+\end{gather*}
+
+FONTE: Pág. 16 do texto ``CQES\_derivadas-NOVO.pdf"
+
+
+\subsubsection*{Derivada da função cosseno:}
+
+\begin{gather*}
+(\textrm{cos } u)' = -u' \textrm{sen } x
+\end{gather*}
+
+FONTE: Pág. 16 do texto ``CQES\_derivadas-NOVO.pdf"
+
+\myline	% Linha horizontal separadora
+
+
+\begin{center}
+FIM
+\end{center}
+
+\end{document}
+
